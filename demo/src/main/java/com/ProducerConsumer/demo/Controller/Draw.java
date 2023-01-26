@@ -108,7 +108,7 @@ public class Draw {
     }
 
     @DeleteMapping("/delete")
-    public void delete(@RequestParam String id) {
+    public void delete(@RequestParam(value = "id") String id) {
         Line l = Line.getInstance();
         int count = 0;
         if (id.charAt(0) == 'M') {
